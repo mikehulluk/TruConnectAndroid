@@ -1,0 +1,27 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="android:Theme.Holo">
+        <item name="spbStyle">@style/SmoothProgressBar</item>
+    </style>
+
+    <integer-array name="progressBarColors">
+        <item>@color/ackme_red_light</item>
+        <item>@color/ackme_grey_dark</item>
+    </integer-array>
+
+    <style name="GPlusProgressBar" parent="SmoothProgressBar">
+        <item name="spb_stroke_separator_length">4dp</item>
+        <item name="spb_sections_count">2</item>
+        <item name="spb_speed">2.5</item>
+        <item name="spb_interpolator">spb_interpolator_linear</item>
+        <item name="spb_colors">@array/progressBarColors</item>
+        <item name="spb_stroke_width">2dp</item>
+    </style>
+
+    <color name="ackme_red_light">#AD2327</color>
+    <color name="ackme_grey_dark">#5a5b5b</color>
+
+
+
+</resources>

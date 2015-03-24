@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ack.me.truconnectandroiddemo" >
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ackme_icon"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Holo" >
+        <activity
+            android:name="ack.me.truconnectandroiddemo.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="ack.me.truconnectandroiddemo.TruconnectService"
+            android:icon="@drawable/ackme_icon"
+            android:label="@string/service_name" >
+        </service>
+
+        <activity
+            android:name="ack.me.truconnectandroiddemo.DeviceInfoActivity"
+            android:label="@string/title_activity_device_info"
+            android:parentActivityName="ack.me.truconnectandroiddemo.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ack.me.truconnectandroiddemo.MainActivity" />
+        </activity>
+    </application>
+
+</manifest>
